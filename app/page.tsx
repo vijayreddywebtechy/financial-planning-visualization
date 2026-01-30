@@ -6,7 +6,6 @@ import {
   BarChart3,
   Briefcase,
   Lightbulb,
-  Building2
 } from 'lucide-react';
 import { RadialBarChart, RadialBar, PolarAngleAxis, ResponsiveContainer } from 'recharts';
 
@@ -20,31 +19,31 @@ export default function Home() {
   );
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#0f172a] p-8">
-      <div className="max-w-[1400px] mx-auto border border-slate-700/50 bg-slate-900/50 backdrop-blur-sm rounded-3xl p-8">
+    <div className="min-h-screen bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#0f172a] p-4 md:p-6 lg:p-8">
+      <div className="max-w-[1400px] mx-auto border border-slate-700/50 bg-slate-900/50 backdrop-blur-sm rounded-2xl md:rounded-3xl p-4 md:p-6 lg:p-8">
 
         {/* ================= Header ================= */}
-        <div className="flex justify-between items-start mb-8">
-          <div>
+        <div className="flex flex-col lg:flex-row justify-between items-start gap-6 mb-6 md:mb-8">
+          <div className="flex-1">
             <div className="flex items-center gap-2 mb-3">
               <Sparkles className="w-5 h-5 text-yellow-400" />
               <span className="text-yellow-400 text-sm font-medium">
                 Premium Portfolio Analysis
               </span>
             </div>
-            <h1 className="text-4xl font-medium text-white mb-2">
+            <h1 className="text-2xl md:text-3xl lg:text-4xl font-medium text-white mb-2">
               Client Portfolio Analysis
             </h1>
-            <p className="text-slate-400 text-sm">
+            <p className="text-slate-400 text-xs md:text-sm">
               Comprehensive portfolio view across 6 accounts with detailed holdings analysis and risk assessment.
             </p>
           </div>
 
           {/* Portfolio Health Card */}
-          <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 min-w-[320px]">
+          <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl p-4 md:p-6 border border-slate-700/50 w-full lg:min-w-[320px] lg:w-auto">
             
-            <div className='flex flex-row'>
-            <div className="relative w-36 h-36 mx-auto mb-3">
+            <div className='flex flex-col md:flex-row items-center gap-4'>
+            <div className="relative w-28 h-28 md:w-36 md:h-36 mb-3">
               <ResponsiveContainer width="100%" height="100%">
                 <RadialBarChart
                   cx="50%"
@@ -76,9 +75,9 @@ export default function Home() {
                 </span>
               </div>
             </div>
-            <div>
-            <div className="text-blue-400 text-sm mb-3">Portfolio Health</div>
-            <div className="text-white text-3xl font-bold mb-4">
+            <div className="text-center md:text-left">
+            <div className="text-blue-400 text-xs md:text-sm mb-2 md:mb-3">Portfolio Health</div>
+            <div className="text-white text-2xl md:text-3xl font-bold mb-3 md:mb-4">
               R 21 649 096
             </div>
             <div className="flex items-center gap-3 mb-2">
@@ -108,7 +107,7 @@ export default function Home() {
         </div>
 
         {/* ================= Tabs ================= */}
-        <div className="flex gap-4 mb-8 border-b border-slate-700/50 pb-6">
+        <div className="flex gap-2 md:gap-4 mb-6 md:mb-8 border-b border-slate-700/50 pb-4 md:pb-6 overflow-x-auto">
           {[
             { id: 'overview', label: 'Overview', icon: BarChart3 },
             { id: 'holdings', label: 'Holdings', icon: Briefcase },
@@ -117,7 +116,7 @@ export default function Home() {
             <button
               key={id}
               onClick={() => setActiveTab(id as any)}
-              className={`flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-all ${
+              className={`flex items-center gap-2 px-4 md:px-6 py-2 md:py-3 rounded-lg font-medium transition-all whitespace-nowrap text-sm md:text-base ${
                 activeTab === id
                   ? 'bg-blue-600/20 text-white border-b-2 border-blue-500'
                   : 'bg-blue-600/20 text-slate-400 hover:text-slate-300'
@@ -135,7 +134,7 @@ export default function Home() {
         {activeTab === 'insights' && <InsightsTab />}
 
         {/* ================= Footer ================= */}
-        <div className="mt-10 flex justify-between items-center text-slate-500 text-sm">
+        <div className="mt-8 md:mt-10 flex flex-col md:flex-row justify-between items-center gap-2 md:gap-0 text-slate-500 text-xs md:text-sm">
           <div>Financial Planning Tool • Customer 360</div>
           <div>Last updated: 2026/01/28</div>
         </div>

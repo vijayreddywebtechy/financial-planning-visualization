@@ -48,63 +48,63 @@ export default function OverviewTab() {
   return (
     <>
       {/* Advisor Actions Section */}
-      <div className="bg-gradient-to-br from-slate-800/30 to-slate-900/30 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 mb-8">
-        <div className="flex items-center gap-2 mb-4">
-          <FileText className="w-5 h-5 text-yellow-400" />
-          <h3 className="text-white font-semibold">Advisor Actions</h3>
+      <div className="bg-gradient-to-br from-slate-800/30 to-slate-900/30 backdrop-blur-sm rounded-xl md:rounded-2xl p-4 md:p-6 border border-slate-700/50 mb-6 md:mb-8">
+        <div className="flex items-center gap-2 mb-3 md:mb-4">
+          <FileText className="w-4 h-4 md:w-5 md:h-5 text-yellow-400" />
+          <h3 className="text-white font-semibold text-sm md:text-base">Advisor Actions</h3>
         </div>
-        <p className="text-slate-400 text-sm mb-4">CRM workflow and client management tools</p>
+        <p className="text-slate-400 text-xs md:text-sm mb-3 md:mb-4">CRM workflow and client management tools</p>
         
-        <div className="grid grid-cols-4 gap-4">
-          <button className="flex items-center gap-3 p-4 bg-slate-800/50 hover:bg-slate-700/50 rounded-xl border border-slate-700/50 transition-all">
-            <CalendarPlus className="w-5 h-5 text-slate-400" />
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
+          <button className="flex items-center gap-2 md:gap-3 p-3 md:p-4 bg-slate-800/50 hover:bg-slate-700/50 rounded-lg md:rounded-xl border border-slate-700/50 transition-all">
+            <CalendarPlus className="w-4 h-4 md:w-5 md:h-5 text-slate-400" />
             <div className="text-left">
-              <div className="text-white font-medium text-sm">Create Task</div>
-              <div className="text-slate-500 text-xs">Add to CRM workflow</div>
+              <div className="text-white font-medium text-xs md:text-sm">Create Task</div>
+              <div className="text-slate-500 text-[10px] md:text-xs">Add to CRM workflow</div>
             </div>
           </button>
           
-          <button className="flex items-center gap-3 p-4 bg-slate-800/50 hover:bg-slate-700/50 rounded-xl border border-slate-700/50 transition-all">
-            <MessageSquare className="w-5 h-5 text-slate-400" />
+          <button className="flex items-center gap-2 md:gap-3 p-3 md:p-4 bg-slate-800/50 hover:bg-slate-700/50 rounded-lg md:rounded-xl border border-slate-700/50 transition-all">
+            <MessageSquare className="w-4 h-4 md:w-5 md:h-5 text-slate-400" />
             <div className="text-left">
-              <div className="text-white font-medium text-sm">Log Interaction</div>
-              <div className="text-slate-500 text-xs">Record client call</div>
+              <div className="text-white font-medium text-xs md:text-sm">Log Interaction</div>
+              <div className="text-slate-500 text-[10px] md:text-xs">Record client call</div>
             </div>
           </button>
           
-          <button className="flex items-center gap-3 p-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 rounded-xl shadow-lg shadow-purple-500/20 transition-all">
-            <Send className="w-5 h-5 text-white" />
+          <button className="flex items-center gap-2 md:gap-3 p-3 md:p-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 rounded-lg md:rounded-xl shadow-lg shadow-purple-500/20 transition-all">
+            <Send className="w-4 h-4 md:w-5 md:h-5 text-white" />
             <div className="text-left">
-              <div className="text-white font-medium text-sm">Send Proposal</div>
-              <div className="text-blue-100 text-xs">Generate recommendation</div>
+              <div className="text-white font-medium text-xs md:text-sm">Send Proposal</div>
+              <div className="text-blue-100 text-[10px] md:text-xs">Generate recommendation</div>
             </div>
           </button>
           
-          <button className="flex items-center gap-3 p-4 bg-slate-800/50 hover:bg-slate-700/50 rounded-xl border border-slate-700/50 transition-all">
-            <StickyNote className="w-5 h-5 text-slate-400" />
+          <button className="flex items-center gap-2 md:gap-3 p-3 md:p-4 bg-slate-800/50 hover:bg-slate-700/50 rounded-lg md:rounded-xl border border-slate-700/50 transition-all">
+            <StickyNote className="w-4 h-4 md:w-5 md:h-5 text-slate-400" />
             <div className="text-left">
-              <div className="text-white font-medium text-sm">Add Note</div>
-              <div className="text-slate-500 text-xs">Save observation</div>
+              <div className="text-white font-medium text-xs md:text-sm">Add Note</div>
+              <div className="text-slate-500 text-[10px] md:text-xs">Save observation</div>
             </div>
           </button>
         </div>
       </div>
 
       {/* Metric Cards */}
-      <div className="grid grid-cols-4 gap-6 mb-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-6 md:mb-8">
         {/* Total Assets */}
-        <div className="bg-gradient-to-br from-slate-800/40 to-slate-900/40 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50">
-          <div className="flex justify-between items-start mb-4">
-            <div className="w-12 h-12 bg-cyan-500/20 rounded-xl flex items-center justify-center">
-              <TrendingUp className="w-6 h-6 text-cyan-400" />
+        <div className="bg-gradient-to-br from-slate-800/40 to-slate-900/40 backdrop-blur-sm rounded-xl md:rounded-2xl p-4 md:p-6 border border-slate-700/50">
+          <div className="flex justify-between items-start mb-3 md:mb-4">
+            <div className="w-10 h-10 md:w-12 md:h-12 bg-cyan-500/20 rounded-xl flex items-center justify-center">
+              <TrendingUp className="w-5 h-5 md:w-6 md:h-6 text-cyan-400" />
             </div>
-            <button className="p-2 hover:bg-slate-700/50 rounded-lg transition-colors">
+            <button className="p-2 bg-slate-700/50 hover:bg-slate-700/90 rounded-lg transition-colors">
               <Eye className="w-4 h-4 text-slate-400" />
             </button>
           </div>
-          <div className="text-slate-400 text-sm mb-2">Total Assets</div>
-          <div className="text-white text-3xl font-bold mb-2">R 21 750 371</div>
-          <div className="text-slate-500 text-xs mb-4">
+          <div className="text-slate-400 text-xs md:text-sm mb-2">Total Assets</div>
+          <div className="text-white text-2xl md:text-3xl font-bold mb-2">R 21 750 371</div>
+          <div className="text-slate-500 text-[10px] md:text-xs mb-3 md:mb-4">
             Sum of all positive account balances across client portfolio
           </div>
           <div className="flex gap-2">
@@ -121,18 +121,18 @@ export default function OverviewTab() {
         </div>
 
         {/* Net Worth */}
-        <div className="bg-gradient-to-br from-slate-800/40 to-slate-900/40 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50">
-          <div className="flex justify-between items-start mb-4">
-            <div className="w-12 h-12 bg-emerald-500/20 rounded-xl flex items-center justify-center">
-              <Wallet className="w-6 h-6 text-emerald-400" />
+        <div className="bg-gradient-to-br from-slate-800/40 to-slate-900/40 backdrop-blur-sm rounded-xl md:rounded-2xl p-4 md:p-6 border border-slate-700/50">
+          <div className="flex justify-between items-start mb-3 md:mb-4">
+            <div className="w-10 h-10 md:w-12 md:h-12 bg-emerald-500/20 rounded-xl flex items-center justify-center">
+              <Wallet className="w-5 h-5 md:w-6 md:h-6 text-emerald-400" />
             </div>
-            <button className="p-2 hover:bg-slate-700/50 rounded-lg transition-colors">
+           <button className="p-2 bg-slate-700/50 hover:bg-slate-700/90 rounded-lg transition-colors">
               <Eye className="w-4 h-4 text-slate-400" />
             </button>
           </div>
-          <div className="text-slate-400 text-sm mb-2">Net Worth</div>
-          <div className="text-white text-3xl font-bold mb-2">R 21 649 096</div>
-          <div className="text-slate-500 text-xs mb-4">
+          <div className="text-slate-400 text-xs md:text-sm mb-2">Net Worth</div>
+          <div className="text-white text-2xl md:text-3xl font-bold mb-2">R 21 649 096</div>
+          <div className="text-slate-500 text-[10px] md:text-xs mb-3 md:mb-4">
             Total assets minus liabilities - key indicator of financial health
           </div>
           <div className="flex gap-2">
@@ -149,18 +149,18 @@ export default function OverviewTab() {
         </div>
 
         {/* Total Liabilities */}
-        <div className="bg-gradient-to-br from-slate-800/40 to-slate-900/40 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50">
-          <div className="flex justify-between items-start mb-4">
-            <div className="w-12 h-12 bg-gradient-to-br from-red-500/20 to-pink-500/20 rounded-xl flex items-center justify-center">
-              <TrendingDown className="w-6 h-6 text-red-400" />
+        <div className="bg-gradient-to-br from-slate-800/40 to-slate-900/40 backdrop-blur-sm rounded-xl md:rounded-2xl p-4 md:p-6 border border-slate-700/50">
+          <div className="flex justify-between items-start mb-3 md:mb-4">
+            <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-red-500/20 to-pink-500/20 rounded-xl flex items-center justify-center">
+              <TrendingDown className="w-5 h-5 md:w-6 md:h-6 text-red-400" />
             </div>
-            <button className="p-2 hover:bg-slate-700/50 rounded-lg transition-colors">
+            <button className="p-2 bg-slate-700/50 hover:bg-slate-700/90 rounded-lg transition-colors">
               <Eye className="w-4 h-4 text-slate-400" />
             </button>
           </div>
-          <div className="text-slate-400 text-sm mb-2">Total Liabilities</div>
-          <div className="text-white text-3xl font-bold mb-2">R 101 275</div>
-          <div className="text-slate-500 text-xs mb-4">
+          <div className="text-slate-400 text-xs md:text-sm mb-2">Total Liabilities</div>
+          <div className="text-white text-2xl md:text-3xl font-bold mb-2">R 101 275</div>
+          <div className="text-slate-500 text-[10px] md:text-xs mb-3 md:mb-4">
             Outstanding debt and financial obligations requiring attention
           </div>
           <div className="flex gap-2">
@@ -177,18 +177,15 @@ export default function OverviewTab() {
         </div>
 
         {/* Active Accounts */}
-        <div className="bg-gradient-to-br from-slate-800/40 to-slate-900/40 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50">
-          <div className="flex justify-between items-start mb-4">
-            <div className="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center">
-              <Users className="w-6 h-6 text-purple-400" />
+        <div className="bg-gradient-to-br from-slate-800/40 to-slate-900/40 backdrop-blur-sm rounded-xl md:rounded-2xl p-4 md:p-6 border border-slate-700/50">
+          <div className="flex justify-between items-start mb-3 md:mb-4">
+            <div className="w-10 h-10 md:w-12 md:h-12 bg-purple-500/20 rounded-xl flex items-center justify-center">
+              <Users className="w-5 h-5 md:w-6 md:h-6 text-purple-400" />
             </div>
-            <button className="p-2 hover:bg-slate-700/50 rounded-lg transition-colors">
-              <Eye className="w-4 h-4 text-slate-400" />
-            </button>
           </div>
-          <div className="text-slate-400 text-sm mb-2">Active Accounts</div>
-          <div className="text-white text-3xl font-bold mb-2">6</div>
-          <div className="text-slate-500 text-xs mb-4">
+          <div className="text-slate-400 text-xs md:text-sm mb-2">Active Accounts</div>
+          <div className="text-white text-2xl md:text-3xl font-bold mb-2">6</div>
+          <div className="text-slate-500 text-[10px] md:text-xs mb-3 md:mb-4">
             Number of active accounts managed across all institutions
           </div>
           <div className="flex gap-2">
@@ -206,19 +203,19 @@ export default function OverviewTab() {
       </div>
 
       {/* Charts Section */}
-      <div className="grid grid-cols-2 gap-6 mb-8">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6 mb-6 md:mb-8">
         {/* Portfolio Value Timeline */}
-        <div className="bg-gradient-to-br from-slate-800/40 to-slate-900/40 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50">
-          <div className="flex justify-between items-center mb-6">
+        <div className="bg-gradient-to-br from-slate-800/40 to-slate-900/40 backdrop-blur-sm rounded-xl md:rounded-2xl p-4 md:p-6 border border-slate-700/50">
+          <div className="flex justify-between items-center mb-4 md:mb-6">
             <div>
-              <h3 className="text-white font-semibold text-lg">Portfolio Value Timeline</h3>
-              <p className="text-slate-400 text-sm">Assets & liabilities over time</p>
+              <h3 className="text-white font-semibold text-base md:text-lg">Portfolio Value Timeline</h3>
+              <p className="text-slate-400 text-xs md:text-sm">Assets & liabilities over time</p>
             </div>
             <button className="p-2 bg-slate-700/50 hover:bg-slate-600/50 rounded-lg transition-colors">
               <Download className="w-4 h-4 text-slate-400" />
             </button>
           </div>
-          <ResponsiveContainer width="100%" height={250}>
+          <ResponsiveContainer width="100%" height={200} className="md:h-[250px]">
             <AreaChart data={timelineData}>
               <defs>
                 <linearGradient id="colorValue" x1="0" y1="0" x2="0" y2="1">
@@ -260,15 +257,15 @@ export default function OverviewTab() {
         </div>
 
         {/* Distribution by Institution */}
-        <div className="bg-gradient-to-br from-slate-800/40 to-slate-900/40 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50">
-          <div className="flex justify-between items-center mb-6">
+        <div className="bg-gradient-to-br from-slate-800/40 to-slate-900/40 backdrop-blur-sm rounded-xl md:rounded-2xl p-4 md:p-6 border border-slate-700/50">
+          <div className="flex justify-between items-center mb-4 md:mb-6">
             <div>
-              <h3 className="text-white font-semibold text-lg">Distribution</h3>
-              <p className="text-slate-400 text-sm">By institution</p>
+              <h3 className="text-white font-semibold text-base md:text-lg">Distribution</h3>
+              <p className="text-slate-400 text-xs md:text-sm">By institution</p>
             </div>
           </div>
-          <div className="flex items-center gap-8">
-            <div className="w-40 h-40">
+          <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8">
+            <div className="w-32 h-32 md:w-40 md:h-40">
               <ResponsiveContainer width="100%" height="100%">
                 <PieChart>
                   <Pie
@@ -303,28 +300,28 @@ export default function OverviewTab() {
       </div>
 
       {/* Top 10 Holdings */}
-      <div className="bg-gradient-to-br from-slate-800/40 to-slate-900/40 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50">
-        <div className="flex items-center gap-3 mb-6">
-          <div className="w-10 h-10 bg-emerald-500/20 rounded-xl flex items-center justify-center">
-            <Wallet className="w-5 h-5 text-emerald-400" />
+      <div className="bg-gradient-to-br from-slate-800/40 to-slate-900/40 backdrop-blur-sm rounded-xl md:rounded-2xl p-4 md:p-6 border border-slate-700/50">
+        <div className="flex items-center gap-2 md:gap-3 mb-4 md:mb-6">
+          <div className="w-8 h-8 md:w-10 md:h-10 bg-emerald-500/20 rounded-xl flex items-center justify-center">
+            <Wallet className="w-4 h-4 md:w-5 md:h-5 text-emerald-400" />
           </div>
           <div>
-            <h3 className="text-white font-semibold text-lg">Top 10 Holdings</h3>
-            <p className="text-slate-400 text-sm">Largest individual positions</p>
+            <h3 className="text-white font-semibold text-base md:text-lg">Top 10 Holdings</h3>
+            <p className="text-slate-400 text-xs md:text-sm">Largest individual positions</p>
           </div>
         </div>
-        <div className="space-y-3">
+        <div className="space-y-2 md:space-y-3">
           {holdings.map((holding) => (
-            <div key={holding.rank} className="flex items-center gap-4">
-              <div className="flex items-center justify-center w-8 h-8 bg-emerald-500/20 rounded-lg text-emerald-400 font-semibold text-sm">
+            <div key={holding.rank} className="flex items-center gap-2 md:gap-4">
+              <div className="flex items-center justify-center w-7 h-7 md:w-8 md:h-8 bg-emerald-500/20 rounded-lg text-emerald-400 font-semibold text-xs md:text-sm">
                 {holding.rank}
               </div>
               <div className="flex-1">
                 <div className="flex items-center justify-between mb-1">
-                  <span className="text-white font-medium">{holding.name}</span>
-                  <div className="flex items-center gap-3">
-                    <span className="text-white font-semibold">R {holding.value.toLocaleString()}</span>
-                    <span className="text-slate-400 text-sm w-12 text-right">{holding.percentage}%</span>
+                  <span className="text-white font-medium text-sm md:text-base">{holding.name}</span>
+                  <div className="flex items-center gap-2 md:gap-3">
+                    <span className="text-white font-semibold text-sm md:text-base">R {holding.value.toLocaleString()}</span>
+                    <span className="text-slate-400 text-xs md:text-sm w-10 md:w-12 text-right">{holding.percentage}%</span>
                   </div>
                 </div>
                 <div className="h-2 bg-slate-700/50 rounded-full overflow-hidden">
