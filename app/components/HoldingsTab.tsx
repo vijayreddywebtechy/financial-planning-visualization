@@ -279,7 +279,7 @@ export default function HoldingsTab() {
                   {account.holdings > 0 && (
                     <button
                       onClick={() => setExpandedAccount(expandedAccount === account.id ? null : account.id)}
-                      className="p-2 hover:bg-slate-700/50 rounded-lg transition-colors"
+                      className="p-2 bg-slate-700/50 hover:bg-slate-700/50 rounded-lg transition-colors"
                     >
                       <ChevronDown className={`w-5 h-5 text-slate-400 transition-transform ${
                         expandedAccount === account.id ? 'rotate-180' : ''
@@ -318,7 +318,7 @@ export default function HoldingsTab() {
                         {holding.date}
                       </div>
                       
-                      <div className="text-white text-lg md:text-xl font-bold">
+                      <div className="text-white text-lg md:text-xl font-normal">
                         R {holding.value.toLocaleString('en-ZA', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
                       </div>
                     </div>

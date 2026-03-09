@@ -1,9 +1,11 @@
+import { useState } from 'react';
 import { 
   TrendingUp, 
   Wallet, 
   TrendingDown, 
   Users, 
   Eye,
+  EyeOff,
   Download,
   Copy,
   FileText,
@@ -15,6 +17,23 @@ import {
 import { AreaChart, Area, PieChart, Pie, Cell, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
 
 export default function OverviewTab() {
+  const [hiddenMetrics, setHiddenMetrics] = useState<{
+    assets: boolean;
+    netWorth: boolean;
+    liabilities: boolean;
+  }>({
+    assets: false,
+    netWorth: false,
+    liabilities: false,
+  });
+
+  const toggleMetric = (metric: 'assets' | 'netWorth' | 'liabilities') => {
+    setHiddenMetrics(prev => ({
+      ...prev,
+      [metric]: !prev[metric]
+    }));
+  };
+
   // Data for the portfolio timeline chart
   const timelineData = [
     { date: '26 Jun', value: 0 },
@@ -98,12 +117,21 @@ export default function OverviewTab() {
             <div className="w-10 h-10 md:w-12 md:h-12 bg-cyan-500/20 rounded-xl flex items-center justify-center">
               <TrendingUp className="w-5 h-5 md:w-6 md:h-6 text-cyan-400" />
             </div>
-            <button className="p-2 bg-slate-700/50 hover:bg-slate-700/90 rounded-lg transition-colors">
-              <Eye className="w-4 h-4 text-slate-400" />
+            <button 
+              onClick={() => toggleMetric('assets')}
+              className="p-2 bg-slate-700/50 hover:bg-slate-700/90 rounded-lg transition-colors"
+            >
+              {hiddenMetrics.assets ? (
+                <EyeOff className="w-4 h-4 text-slate-400" />
+              ) : (
+                <Eye className="w-4 h-4 text-slate-400" />
+              )}
             </button>
           </div>
           <div className="text-slate-400 text-xs md:text-sm mb-2">Total Assets</div>
-          <div className="text-white text-2xl md:text-3xl font-bold mb-2">R 21 750 371</div>
+          <div className="text-cyan-400 text-2xl md:text-3xl mb-2">
+            {hiddenMetrics.assets ? '* * * * * * *' : 'R 21 750 371'}
+          </div>
           <div className="text-slate-500 text-[10px] md:text-xs mb-3 md:mb-4">
             Sum of all positive account balances across client portfolio
           </div>
@@ -126,12 +154,21 @@ export default function OverviewTab() {
             <div className="w-10 h-10 md:w-12 md:h-12 bg-emerald-500/20 rounded-xl flex items-center justify-center">
               <Wallet className="w-5 h-5 md:w-6 md:h-6 text-emerald-400" />
             </div>
-           <button className="p-2 bg-slate-700/50 hover:bg-slate-700/90 rounded-lg transition-colors">
-              <Eye className="w-4 h-4 text-slate-400" />
+           <button 
+              onClick={() => toggleMetric('netWorth')}
+              className="p-2 bg-slate-700/50 hover:bg-slate-700/90 rounded-lg transition-colors"
+            >
+              {hiddenMetrics.netWorth ? (
+                <EyeOff className="w-4 h-4 text-slate-400" />
+              ) : (
+                <Eye className="w-4 h-4 text-slate-400" />
+              )}
             </button>
           </div>
           <div className="text-slate-400 text-xs md:text-sm mb-2">Net Worth</div>
-          <div className="text-white text-2xl md:text-3xl font-bold mb-2">R 21 649 096</div>
+          <div className="text-emerald-400 text-2xl md:text-3xl mb-2">
+            {hiddenMetrics.netWorth ? '* * * * * * *' : 'R 21 649 096'}
+          </div>
           <div className="text-slate-500 text-[10px] md:text-xs mb-3 md:mb-4">
             Total assets minus liabilities - key indicator of financial health
           </div>
@@ -154,12 +191,21 @@ export default function OverviewTab() {
             <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-red-500/20 to-pink-500/20 rounded-xl flex items-center justify-center">
               <TrendingDown className="w-5 h-5 md:w-6 md:h-6 text-red-400" />
             </div>
-            <button className="p-2 bg-slate-700/50 hover:bg-slate-700/90 rounded-lg transition-colors">
-              <Eye className="w-4 h-4 text-slate-400" />
+            <button 
+              onClick={() => toggleMetric('liabilities')}
+              className="p-2 bg-slate-700/50 hover:bg-slate-700/90 rounded-lg transition-colors"
+            >
+              {hiddenMetrics.liabilities ? (
+                <EyeOff className="w-4 h-4 text-slate-400" />
+              ) : (
+                <Eye className="w-4 h-4 text-slate-400" />
+              )}
             </button>
           </div>
           <div className="text-slate-400 text-xs md:text-sm mb-2">Total Liabilities</div>
-          <div className="text-white text-2xl md:text-3xl font-bold mb-2">R 101 275</div>
+          <div className="text-red-400 text-2xl md:text-3xl mb-2">
+            {hiddenMetrics.liabilities ? '* * * * * * *' : 'R 101 275'}
+          </div>
           <div className="text-slate-500 text-[10px] md:text-xs mb-3 md:mb-4">
             Outstanding debt and financial obligations requiring attention
           </div>
